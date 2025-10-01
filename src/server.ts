@@ -2,10 +2,14 @@
 // import * as http from 'http';
 
 import http from 'http';
+import fs from 'fs';
 import { IncomingMessage, ServerResponse } from 'http';
 import { generateMainContent } from './content';
 
 const port = 8000;
+
+const jobs = JSON.parse(fs.readFileSync('./src/data/jobs.json', 'utf-8'));
+console.log(jobs);
 
 (() => {
   http
