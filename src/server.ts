@@ -14,7 +14,7 @@ console.log(jobs);
 http
   .createServer((req: IncomingMessage, res: ServerResponse) => {
     // const html = await generateMainContent(); // HTML bei jedem Request neu generieren
-    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.writeHead(200, { 'Content-Type': 'application/json' });
     // res.write('info site');
     // res.write(html);
     res.write(JSON.stringify(jobs));
