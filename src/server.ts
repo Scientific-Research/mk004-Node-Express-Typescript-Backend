@@ -30,6 +30,11 @@ app.get('/', (req: express.Request, res: express.Response) => {
   res.send('job site api');
 });
 
+app.get('/jobs', (req: express.Request, res: express.Response) => {
+  res.send(jobs); // showing the jobs on the browser or test.rest or Postmann => http://localhost:8000/jobs
+  // res.json(jobs);
+});
+
 app.listen(port, () => {
   console.log(`listening on http://localhost:${port}`);
 });

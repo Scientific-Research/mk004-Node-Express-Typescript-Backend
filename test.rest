@@ -1,3 +1,4 @@
 @url = http://localhost:8000
 ### base route 
-GET {{url}}
+
+GET {{url}}/jobs
