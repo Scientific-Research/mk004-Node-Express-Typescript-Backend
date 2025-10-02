@@ -4,10 +4,16 @@
 // import http from 'http';
 import express from 'express';
 import fs from 'fs';
+import cors from 'cors';
 // import { IncomingMessage, ServerResponse } from 'http';
 // import { generateMainContent } from './content';
 
 const app = express();
+app.use(cors()); // erlaubt alle Origins
+
+// oder spezifisch:
+// app.use(cors({ origin: 'http://localhost:5173' }));
+
 const port = 8000;
 
 const jobs = JSON.parse(fs.readFileSync('./src/data/jobs.json', 'utf-8'));
